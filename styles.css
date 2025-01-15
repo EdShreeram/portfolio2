@@ -25,14 +25,16 @@ body {
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  transition: background 0.3s ease;
-  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .navbar .logo {
@@ -41,13 +43,12 @@ body {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease;
-  text-align: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -55,7 +56,9 @@ body {
 .nav-links a {
   color: #fff;
   text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s ease;
+  padding: 0.5rem 0;
 }
 
 .nav-links a:hover {
@@ -69,18 +72,73 @@ body {
   cursor: pointer;
   color: #fff;
   transition: color 0.3s ease;
+  padding: 0.5rem;
+  margin-left: 1rem;
 }
 
 .dark-mode-toggle:hover {
   color: #007bff;
 }
 
-/* Light Mode Styles */
-body.light-mode {
-  background: #f9f9f9;
-  color: #333;
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  z-index: 1001;
 }
 
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    padding: 80px 2rem 2rem;
+    transition: right 0.3s ease;
+    gap: 1.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+/* Light Mode Styles */
 body.light-mode .navbar {
   background: rgba(255, 255, 255, 0.8);
 }
@@ -91,52 +149,37 @@ body.light-mode .dark-mode-toggle {
   color: #333;
 }
 
-body.light-mode .nav-links a:hover {
-  color: #007bff;
+body.light-mode .hamburger span {
+  background-color: #333;
 }
 
-body.light-mode .hero {
-  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-  color: #333;
+body.light-mode .nav-links {
+  background: rgba(255, 255, 255, 0.95);
 }
 
-body.light-mode .about,
-body.light-mode .projects,
-body.light-mode .skills,
-body.light-mode .contact {
-  background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
-  color: #333;
+@media screen and (max-width: 768px) {
+  body.light-mode .nav-links {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  body.light-mode .nav-links a {
+    color: #333;
+  }
 }
 
-body.light-mode .project-card {
-  background: rgba(0, 0, 0, 0.1);
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
 }
 
-body.light-mode .project-card:hover {
-  background: rgba(0, 0, 0, 0.2);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-body.light-mode .skill-bar {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .form-group input,
-body.light-mode .form-group textarea {
-  background: rgba(0, 0, 0, 0.1);
-  color: #333;
-}
-
-body.light-mode .form-group input:focus,
-body.light-mode .form-group textarea:focus {
-  background: rgba(0, 0, 0, 0.2);
-  border-color: #007bff;
-}
-
-body.light-mode .footer {
-  background: rgba(255, 255, 255, 0.8);
-  color: #333;
-}
-
 /* Hero Section */
 .hero {
 background: linear-gradient(135deg, #000, #111);
