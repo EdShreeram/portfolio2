@@ -2,164 +2,163 @@
 
 /* For devices with a maximum width of 1200px (e.g., tablets in landscape mode) */
 @media (max-width: 1200px) {
-    .hero-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero-text {
-      max-width: 100%;
-      margin-bottom: 2rem;
-    }
-  
-    .hero-shapes {
-      width: 100%;
-      height: auto;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-    }
-  
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-image img {
-      margin: 0 auto;
-    }
-  
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .project-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .achievements-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  /* For devices with a maximum width of 768px (e.g., tablets in portrait mode) */
-  @media (max-width: 768px) {
-    .navbar .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-  
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-text p {
-      font-size: 1rem;
-    }
-  
-    .hero-shapes {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 1fr);
-    }
-  
-    .about h2,
-    .skills h2,
-    .projects h2,
-    .achievements h2,
-    #contact h2 {
-      margin-right: 0;
-      text-align: center;
-      width: 100%;
-    }
-  
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .project-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .achievements-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .contact-info-upper-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .contact-info-container {
-      margin: 0.5rem 0;
-    }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 2rem;
   }
-  
-  /* For devices with a maximum width of 480px (e.g., mobile phones) */
-  @media (max-width: 480px) {
-    .hero-text h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-text p {
-      font-size: 0.9rem;
-    }
-  
-    .hero-shapes {
-      height: auto;
-    }
-  
-    .shape {
-      padding: 1rem;
-    }
-  
-    .about-image img {
-      margin: 0 auto;
-      width: 100%;
-    }
-  
-    .skills-grid,
-    .project-grid,
-    .achievements-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .contact-info-container p {
-      font-size: 1rem;
-    }
-  
-    .contact-icon {
-      height: 2rem;
-    }
+
+  .hero-shapes {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
-  
-  /* For devices with a maximum width of 320px (e.g., small mobile phones) */
-  @media (max-width: 320px) {
-    .hero-text h1 {
-      font-size: 1.8rem;
-    }
-  
-    .hero-text p {
-      font-size: 0.8rem;
-    }
-  
-    .shape {
-      font-size: 0.9rem;
-    }
-  
-    .about-content,
-    .skills-grid,
-    .project-grid,
-    .achievements-grid {
-      padding: 1rem;
-    }
-  
-    .contact-info-container p {
-      font-size: 0.9rem;
-    }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
+  .about-image img {
+    margin: 0 auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For devices with a maximum width of 768px (e.g., tablets in portrait mode) */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-shapes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .about h2,
+  .skills h2,
+  .projects h2,
+  .achievements h2,
+  #contact h2 {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info-container {
+    margin: 0.5rem 0;
+  }
+}
+
+/* For devices with a maximum width of 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-shapes {
+    height: auto;
+  }
+
+  .shape {
+    padding: 1rem;
+  }
+
+  .about-image img {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .skills-grid,
+  .project-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-container p {
+    font-size: 1rem;
+  }
+
+  .contact-icon {
+    height: 2rem;
+  }
+}
+
+/* For devices with a maximum width of 320px (e.g., small mobile phones) */
+@media (max-width: 320px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
+  }
+
+  .shape {
+    font-size: 0.9rem;
+  }
+
+  .about-content,
+  .skills-grid,
+  .project-grid,
+  .achievements-grid {
+    padding: 1rem;
+  }
+
+  .contact-info-container p {
+    font-size: 0.9rem;
+  }
+}
