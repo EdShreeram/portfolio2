@@ -18,49 +18,73 @@ body {
   
   /* Navbar */
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    transition: background 0.3s ease;
-    text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the hamburger menu */
   }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-    text-align: center;
-  }
-  
+
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
+    display: none; /* Hide the links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    gap: 0.5rem;
   }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+
+  .nav-links.active {
+    display: flex; /* Show the links when active */
   }
-  
-  .nav-links a:hover {
-    color: #007bff;
-  }
+}
+
   
   .dark-mode-toggle {
     background: none;
