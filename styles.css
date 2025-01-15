@@ -540,7 +540,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 2rem;
-border: #16087b 0.1rem solid;
+border: #823f98 0.1rem solid;
 background: rgba(255, 255, 255, 0.1);
 margin: 2rem auto;
 padding: 1rem;
@@ -567,7 +567,7 @@ transition: color 0.3s ease;
 }
 
 .contact-info-container a:hover {
-color: #007bff;
+color: #823f98;
 }
 
 .contact-icon {
@@ -620,7 +620,7 @@ color: #333;
 
 body.light-mode .contact-info-upper-container {
 background: rgba(255, 255, 255, 0.8);
-border-color: #007bff;
+border-color: #823f98;
 }
 
 body.light-mode .contact-info-container p {
@@ -632,7 +632,7 @@ color: #333;
 }
 
 body.light-mode .contact-info-container a:hover {
-color: #007bff;
+color: #823f98;
 }
 
 /* Light Mode Styles for Footer Section */
